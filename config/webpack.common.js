@@ -174,7 +174,12 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#plugins
    */
   plugins: [
-
+    new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery",
+          "window.jQuery": "jquery",
+          Hammer: "hammerjs/hammer"
+      }),
     /*
      * Plugin: ForkCheckerPlugin
      * Description: Do type checking in a separate process, so webpack don't need to wait.
@@ -187,7 +192,7 @@ module.exports = {
      * Plugin: OccurenceOrderPlugin
      * Description: Varies the distribution of the ids to get the smallest id length
      * for often used ids.
-     *
+     *00
      * See: https://webpack.github.io/docs/list-of-plugins.html#occurrenceorderplugin
      * See: https://github.com/webpack/docs/wiki/optimization#minimize
      */

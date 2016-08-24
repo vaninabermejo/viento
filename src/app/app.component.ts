@@ -5,7 +5,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 import { AppState } from './app.service';
 
-import { MD_SIDENAV_DIRECTIVES } from '@angular2-material/sidenav';
+import {MaterializeDirective} from "angular2-materialize";
 
 /*
  * App Component
@@ -13,20 +13,24 @@ import { MD_SIDENAV_DIRECTIVES } from '@angular2-material/sidenav';
  */
 @Component({
   selector: 'app',
-  directives: [ MD_SIDENAV_DIRECTIVES],
+  directives: [ MaterializeDirective],
   encapsulation: ViewEncapsulation.None,
 
   template: `
-
-<md-sidenav-layout>
-  <md-content>
-    <md-button (click)="right.open()">
-      Open Rightvanina Menu
-    </md-button>
-  </md-content>
-  <md-sidenav #right md-component-id="right" class="md-sidenav-right">
-      vanina
-    </md-sidenav>
+  <ul materialize="collapsible" class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+          </ul>
     <nav>
       <span>
         <a [routerLink]=" ['./'] ">
@@ -52,7 +56,17 @@ import { MD_SIDENAV_DIRECTIVES } from '@angular2-material/sidenav';
         </a>
       </span>
     </nav>
-
+    <a materialize="leanModal" [materializeParams]="[{dismissible: false}]" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
     <main>
       <router-outlet></router-outlet>
     </main>

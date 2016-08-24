@@ -5,6 +5,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { decorateModuleRef } from './app/environment';
 import { ApplicationRef } from '@angular/core';
 import { bootloader } from '@angularclass/hmr';
+import "materialize-css";
+import "angular2-materialize";
 /*
  * App Module
  * our top level module that holds all of our components
@@ -24,4 +26,3 @@ export function main(): Promise<any> {
 
 
 bootloader(main);
-
