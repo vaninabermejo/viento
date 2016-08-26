@@ -9,19 +9,29 @@ import { FormsModule } from '@angular/forms';
  * Platform and Environment providers/directives/pipes
  */
 import { ENV_PROVIDERS } from './environment';
-import { ROUTES } from './app.routes';
+//import { ROUTES } from './app.routes';
 // App is our top level component
 import { App } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
+import {MaterializeDirective} from "angular2-materialize";
+
 import { AppState } from './app.service';
 import { Home } from './home';
 import { About } from './about';
 import { NoContent } from './no-content';
-import {MaterializeDirective} from "angular2-materialize";
+import { HeroesModule } from './pages/heroes/heroes.module';
+import { routing, appRoutingProviders } from './app.routing';
+
+import { LoginComponent } from './pages/login/login.component';
+
+import { DialogService }  from './services/crisis-center/dialog.service';
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
-  AppState
+  AppState,
+  appRoutingProviders,
+  DialogService
 ];
 
 /**
@@ -34,13 +44,14 @@ const APP_PROVIDERS = [
     About,
     Home,
     NoContent,
-    MaterializeDirective
+    MaterializeDirective,
+    LoginComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    routing
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

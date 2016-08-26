@@ -4,7 +4,7 @@ import { About } from './about';
 import { NoContent } from './no-content';
 
 import { DataResolver } from './app.resolver';
-
+import { loginRoutes, authProviders }  from './pages/login/loging.routing';
 // AngularClass
 // import { provideWebpack } from '@angularclass/webpack-toolkit';
 // import { providePrefetchIdleCallbacks } from '@angularclass/request-idle-callback';

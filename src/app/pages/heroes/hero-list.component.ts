@@ -3,13 +3,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { Hero, HeroService }  from '../../services/heroes/hero.service';
 import { Subscription }       from 'rxjs/Subscription';
-import {MATERIAL_DIRECTIVES, MATERIAL_PROVIDERS} from "ng2-material";
+
 
 @Component({
   template: `
     <h2>HEROES</h2>
     <md-content >
- 
+
       <ul class="items">
         <li *ngFor="let hero of heroes"
         [class.selected]="isSelected(hero)"
