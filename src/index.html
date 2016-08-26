@@ -6,28 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-
-
   <title><%= webpackConfig.metadata.title %></title>
-
-
   <meta name="description" content="<%= webpackConfig.metadata.title %>">
 
   <% if (webpackConfig.htmlElements.headTags) { %>
-  <!-- Configured Head Tags  -->
   <%= webpackConfig.htmlElements.headTags %>
   <% } %>
 
-  <!-- base url -->
   <base href="<%= webpackConfig.metadata.baseUrl %>">
-
-
 </head>
 
 <body>
-
   <app>
-    Loading...
+    Loading application...
   </app>
 
   <!-- Google Analytics: change UA-71073175-1 to be your site's ID -->
@@ -45,7 +36,5 @@
   <!-- Webpack Dev Server reload -->
   <script src="/webpack-dev-server.js"></script>
   <% } %>
-
-
 </body>
 </html>

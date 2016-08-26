@@ -8,9 +8,17 @@ import {SideNav} from './pages/components/side-nav';
   selector: 'app',
   directives: [ MaterializeDirective ],
   encapsulation: ViewEncapsulation.None,
+  styles:[`body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
 
-  template: `
-  <nav class=" teal darken-3">
+  main {
+    flex: 1 0 auto;
+  }`],
+   template: `
+  <nav class="teal darken-3">
      <ul class="right hide-on-med-and-down">
        <div navbar-fixed hide-on-small-only >
        <li routerLinkActive="active"><a [routerLink]="['/yyyy']">login</a></li>
@@ -29,24 +37,26 @@ import {SideNav} from './pages/components/side-nav';
    </ul>
    <a materialize="sideNav" [materializeParams]="[{edge:'left'}]" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu">Menu</i></a>
   </nav>
-
-    <a materialize="leanModal" [materializeParams]="[{dismissible: false}]" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+    <main class="container">
+      <a materialize="leanModal" [materializeParams]="[{dismissible: false}]" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>A bunch of text</p>
+        </div>
       </div>
-          </div>
-    <main>
       <router-outlet></router-outlet>
+      <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
     </main>
 
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
 
-    <footer class="modal-footer">
-      <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    <footer class="page-footer teal darken-3" data-position="bottom">
+     <div class="container">
+     <a class="grey-text text-lighten-4">© 2016 Copyright Text</a>
+     <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+     </div>
+
     </footer>
 
   `
