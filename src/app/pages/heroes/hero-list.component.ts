@@ -13,13 +13,28 @@ import { Subscription }       from 'rxjs/Subscription';
       <ul class="items">
         <li *ngFor="let hero of heroes"
         [class.selected]="isSelected(hero)"
-        (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
+        (click)="onSelect(hero)" [class.featured]="hero.featured">
+        <div class="panel-body">
+          <div class="photo">
+            <img [src]="hero.image">
+          </div>
+          <table class="product=info">
+          <tr>
+            <td>
+                <span class="badge">{{hero.id}}</span><h3> {{hero.name | uppercase}}</h3>
+                <p *ngif="hero.stock>0">{{hero.stock}}in Stock</p>
+                <p *ngif="hero.stock===0">out of Stock</p>
+            </td>
+            <td class="price">{{hero.price | currency:'EUR':true}}</td>
+          </tr>
+        </table>
+      </div>
       </li>
     </ul>
 
 </md-content>
-  `})
+  `,
+styles:["./hero-list.component.css"])
 export class HeroListComponent implements OnInit, OnDestroy {
   heroes: Hero[];
 
