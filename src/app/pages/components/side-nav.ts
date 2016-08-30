@@ -9,6 +9,9 @@ import {MaterializeDirective} from "angular2-materialize";
         <div navbar-fixed hide-on-small-only >
         <li routerLinkActive="active"><a [routerLink]="['/yyyy']">login</a></li>
         <li routerLinkActive="active"><a hreF="#" (click)="xxxx($event)">Search</a></li>
+        <li routerLinkActive="active"><a routerLink="/dashboard" >Dashboard</a></li>
+        <li routerLinkActive="active"><a routerLink="/heroes" routerLinkActive="active">Heroes</a></li>
+
         <li routerLinkActive="active"><a href="#" (click)="logout($event)">Logout</a></li>
       </div>
       </ul>
@@ -18,10 +21,12 @@ import {MaterializeDirective} from "angular2-materialize";
           <li><a [routerLink]="['/yyyy']">login</a></li>
           <li><a hreF="#" (click)="xxxx($event)">Seach</a></li>
           <li><a href="#" (click)="logout($event)">Logout</a></li>
-               </ul>
+          <li routerLinkActive="active"><a routerLink="/dashboard" >Dashboard</a></li>
+          <li routerLinkActive="active"><a routerLink="/heroes" routerLinkActive="active">Heroes</a></li>
+        </ul>
       </div>
     </ul>
-    <a materialize="sideNav" [materializeParams]="[{edge:'left'}]" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu">Menu</i></a>
+     <a materialize="sideNav" [materializeParams]="[{edge:'left'}]" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu">Menu</i></a>
    </nav>
 <nav class="sidebar ">
     <ul  class="side-nav fixed">

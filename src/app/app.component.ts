@@ -8,8 +8,7 @@ import {SideNav} from './pages/components/side-nav';
   selector: 'app',
   directives: [ MaterializeDirective,SideNav ],
   encapsulation: ViewEncapsulation.None,
-  styles: [`header, main, footer { padding-left: 260px; }`],
-   template: `
+  template: `
    <sideNav></sideNav>
    <!-- <h2>{{name}}</h2>
     <main class="container">
@@ -37,7 +36,8 @@ import {SideNav} from './pages/components/side-nav';
 
     </footer>
 
-  `
+  `,
+  styleUrls: ['./app.component.css']
 })
 export class App {
   angularclassLogo = 'assets/img/angularclass-avatar.png';

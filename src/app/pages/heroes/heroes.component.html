@@ -1,0 +1,28 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="isSelected(hero)"
+    (click)="onSelect(hero)" [class.featured]="hero.featured">``>
+    <div class="panel-body">
+      <div class="photo">
+        <img [src]="hero.image">
+      </div>
+      <table class="product=info">
+      <tr>
+        <td>
+            <span class="badge">{{hero.id}}</span><h3> {{hero.name | uppercase}}</h3>
+            <!-- <p *ngif="hero.stock>0">{{hero.stock}}in Stock</p>
+            <p *ngif="hero.stock===0">out of Stock</p>  -->
+        </td>
+        <td class="price">{{hero.price | currency:'EUR':true}}</td>
+      </tr>
+    </table>
+    </div>
+    </li>
+    </ul>
+<div *ngIf="selectedHero">
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

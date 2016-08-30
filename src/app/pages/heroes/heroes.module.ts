@@ -2,7 +2,7 @@ import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
 import { FormsModule }    from '@angular/forms';
 
-import { HeroListComponent }    from './hero-list.component';
+import { HeroComponent }    from './hero.component';
 import { HeroDetailComponent }  from './hero-detail.component';
 
 import { HeroService } from '../../services/heroes/hero.service';
@@ -17,8 +17,7 @@ import { heroesRouting } from './heroes.routing';
     heroesRouting
   ],
   declarations: [
-    HeroListComponent,
-    HeroDetailComponent
+    HeroComponent
   ],
   providers: [
     HeroService
