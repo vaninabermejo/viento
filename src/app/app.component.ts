@@ -22,11 +22,12 @@ import {SideNav} from './pages/components/side-nav';
       <router-outlet></router-outlet>
       <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
     </main> -->
-    <section class="main-container" >
+    <div class="container">
+
       	<h2>{{name}}</h2>
 
 	<router-outlet></router-outlet>
-</section>
+</div>
 
     <footer class="page-footer teal darken-3" data-position="bottom">
      <div class="container">
