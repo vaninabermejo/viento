@@ -29,13 +29,13 @@ import {SideNav} from './pages/components/side-nav';
 	<router-outlet></router-outlet>
 </div>
 
-    <footer class="page-footer teal darken-3" data-position="bottom">
+    <!-- <footer class="page-footer teal darken-3" data-position="bottom">
      <div class="container">
      <a class="grey-text text-lighten-4">© 2016 Copyright Text</a>
      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
      </div>
 
-    </footer>
+    </footer> -->
 
   `,
   styleUrls: ['./app.component.css']

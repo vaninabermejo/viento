@@ -3,6 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { FormsModule } from '@angular/forms';
+import { HttpModule }    from '@angular/http';
+
+
+import './rxjs-extension';
+
+
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+
 
 import { ENV_PROVIDERS } from './environment';
 //import { ROUTES } from './app.routes';
@@ -27,11 +37,13 @@ import { DashboardComponent }   from './pages/dashboard/dashboard.component';
 import { HeroDetailComponent }  from './pages/heroes/hero-detail.component';
 import { HeroesComponent }      from './pages/heroes/heroes.component';
 import { HeroService }          from './services/heroes/hero.service';
+import { HeroSearchComponent }  from './pages/heroes/hero-search.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AppState,
+  HeroService
   //appRoutingProviders
   //DialogService
 ];
@@ -50,18 +62,19 @@ const APP_PROVIDERS = [
     LoginComponent,
     DashboardComponent,
     HeroDetailComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroSearchComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
-//    HttpModule,
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
     routing
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS,
-    HeroService
+    APP_PROVIDERS
   ]
 })
 export class AppModule {
