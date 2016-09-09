@@ -57,4 +57,12 @@ export class HeroesComponent implements OnInit, OnDestroy {
          if (this.selectedHero === hero) { this.selectedHero = null; }
        });
  }
+ upQuantity(hero): void{
+   if (hero.quantity < hero.stock) hero.quantity++;
+
+ }
+ downQuantity(hero): void{
+   if (hero.quantity !=0) hero.quantity--;
+  
+ }
 }

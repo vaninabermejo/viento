@@ -38,6 +38,8 @@ import { HeroDetailComponent }  from './pages/heroes/hero-detail.component';
 import { HeroesComponent }      from './pages/heroes/heroes.component';
 import { HeroService }          from './services/heroes/hero.service';
 import { HeroSearchComponent }  from './pages/heroes/hero-search.component';
+import { ScoreboardComponent }  from './pages/scoreboard/scoreboard.component';
+import { ScoreboardItemComponent }  from './pages/scoreboard/scoreboardItem.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -63,7 +65,9 @@ const APP_PROVIDERS = [
     DashboardComponent,
     HeroDetailComponent,
     HeroesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    ScoreboardComponent,
+    ScoreboardItemComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,

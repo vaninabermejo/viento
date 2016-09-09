@@ -6,27 +6,38 @@
   </button>
 </div>
 
-<ul class="heroes">
   <li *ngFor="let hero of heroes"
     [class.selected]="isSelected(hero)"
-    (click)="onSelect(hero)" [class.featured]="hero.featured">``>
-    <div class="panel-body">
+    (click)="onSelect(hero)" [class.featured]="hero.featured">
       <div class="photo">
         <img [src]="hero.image">
       </div>
-      <table class="product=info">
       <tr>
         <td>
-            <span class="badge">{{hero.id}}</span><h3> {{hero.name | uppercase}}</h3>
-            <!-- <p *ngif="hero.stock>0">{{hero.stock}}in Stock</p>
-            <p *ngif="hero.stock===0">out of Stock</p>  -->
+             <span class="badge">{{hero.id}}</span>
+        </td>
+        <td>
+          <p >{{hero.name}}</p>
+        </td>
+        <td>
+          <span *ngIf="hero.stock>0">{{hero.stock}}in Stock</span>
+          <span *ngIf="hero.stock===0">out of Stock</span>
         </td>
         <td class="price">{{hero.price | currency:'EUR':true}}</td>
+        <td>
+          <button class="delete" (click)="delete(hero); $event.stopPropagation()">x</button>
+        </td>
+        <td>
+          <div class="select-quantity">
+              <button class="increase" (click)="upQuantity(hero)">+</button>
+              <input class="number"  type="text" [(ngModel)]="hero.quantity" />
+              <button class="increase" (click)="downQuantity(hero)">-</button>
+          </div>
+
+        </td>
       </tr>
-    </table>
-    </div>
     </li>
-    </ul>
+
 <div *ngIf="selectedHero">
   <h2>
     {{selectedHero.name | uppercase}} is my hero

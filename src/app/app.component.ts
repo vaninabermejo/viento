@@ -4,6 +4,8 @@ import { AppState } from './app.service';
 import {MaterializeDirective} from "angular2-materialize";
 import "materialize-css";
 import {SideNav} from './pages/components/side-nav';
+import {FooterNav} from './pages/components/footer-nav';
+
 @Component({
   selector: 'app',
   directives: [ MaterializeDirective,SideNav ],
@@ -22,13 +24,15 @@ import {SideNav} from './pages/components/side-nav';
       <router-outlet></router-outlet>
       <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
     </main> -->
+<main>
     <div class="container">
 
       	<h2>{{name}}</h2>
 
 	<router-outlet></router-outlet>
 </div>
-
+<main>
+<footerNav></footerNav>
     <!-- <footer class="page-footer teal darken-3" data-position="bottom">
      <div class="container">
      <a class="grey-text text-lighten-4">© 2016 Copyright Text</a>

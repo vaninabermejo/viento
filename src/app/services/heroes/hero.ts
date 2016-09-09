@@ -5,4 +5,5 @@ export class Hero {
  price:number ;
  image:string ;
  featured : boolean;
+ quantity:number;
 }

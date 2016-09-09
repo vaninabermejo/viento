@@ -4,6 +4,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { DashboardComponent }   from './pages/dashboard/dashboard.component';
 import { HeroesComponent }      from './pages/heroes/heroes.component';
 import { HeroDetailComponent }  from './pages/heroes/hero-detail.component';
+import { ScoreboardComponent }  from './pages/scoreboard/scoreboard.component';
 // import { Home } from './home';
 // import { About } from './about';
 // import { NoContent } from './no-content';
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
     //{ path: 'about', component: About },
     { path: 'detail/:id', component: HeroDetailComponent  },
     { path: 'heroes', component: HeroesComponent },
+    { path: 'scoreboard', component: ScoreboardComponent }
     //{ path: '**',    component: NoContent }
 
 ];

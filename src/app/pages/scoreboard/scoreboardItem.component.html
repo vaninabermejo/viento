@@ -1,0 +1,9 @@
+<div class="scoreboard-item" [class.finished]="score.currentLap >= score.totalLaps" *ngIf="score">
+  <h2>{{race.name}}</h2>
+  <p>Lap {{score.currentLap}} of {{score.totalLaps}}</p>
+  <ol>
+    <li *ngFor="let racer of score.racers let i=index">
+      {{racer}}
+    </li>
+  </ol>
+</div>
