@@ -8,38 +8,31 @@ import {FooterNav} from './pages/components/footer-nav';
 
 @Component({
   selector: 'app',
-  directives: [ MaterializeDirective,SideNav ],
+  directives: [ MaterializeDirective,SideNav ,FooterNav],
   encapsulation: ViewEncapsulation.None,
   template: `
-   <sideNav></sideNav>
-   <!-- <h2>{{name}}</h2>
-    <main class="container">
-      <a materialize="leanModal" [materializeParams]="[{dismissible: false}]" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
+    <!-- <header>
+    <sideNav></sideNav>
+  </header>
+  <main>
+      <div class="container">
+        <div class="row">
+          <router-outlet></router-outlet>
         </div>
       </div>
+  </main>
+<footerNav></footerNav> -->
+<body>
+  <sideNav></sideNav>
+<main>
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <router-outlet></router-outlet>
-      <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-    </main> -->
-<main>
-    <div class="container">
-
-      	<h2>{{name}}</h2>
-
-	<router-outlet></router-outlet>
-</div>
-<main>
+  </div>
+</main>
 <footerNav></footerNav>
-    <!-- <footer class="page-footer teal darken-3" data-position="bottom">
-     <div class="container">
-     <a class="grey-text text-lighten-4">© 2016 Copyright Text</a>
-     <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-     </div>
+</body>
 
-    </footer> -->
 
   `,
   styleUrls: ['./app.component.css']
