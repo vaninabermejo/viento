@@ -1,4 +1,4 @@
-<h3>Top Heroes</h3>
+<!-- <h3>Top Heroes</h3>
 <div class="grid grid-pad">
   <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
     <div class="module hero">
@@ -6,4 +6,292 @@
     </div>
   </div>
 </div>
-<hero-search></hero-search>
+<hero-search></hero-search> -->
+<div class="section white">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col m3 s12">
+        <h1 class="saugroboter-h1">title
+          <span>(100)</span>
+        </h1>
+        <router-outlet></router-outlet>
+        <div class="filter-elements">
+          <a class="btn waves-effect waves-light green" href="/roboter/saugroboter/">boton1</a>
+          <a class="btn waves-effect waves-light blue" href="/roboter/saugroboter/vergleich/">boton2</a>
+          <a class="btn waves-effect waves-light orange" href="/roboter/saugroboter/gebraucht/">boton3</a>
+          <div class="filter-container">
+            <strong class="big-font">busquedas</strong>
+            <input type="hidden" value="1" name="filter">
+            <input type="hidden" value="" name="term">
+            <input type="hidden" value="" name="used">
+
+            <ul class="collapsible" data-collapsible="expandable">
+              <li>
+                <div class="collapsible-header">
+                  <i class="fa fa-eur"></i>Precio</div>
+                <div class="collapsible-body">
+                  <div class="input-field col l4 m12">
+                    <input class="validate" type="text" name="minp" id="minp" value="">
+                    <label for="minp">precio</label>
+                  </div>
+                  <div class="input-field col l5 m12">
+                    <input class="validate" type="text" name="maxp" id="maxp" value="">
+                    <label for="maxp">precio</label>
+                  </div>
+                  <div class="input-field col l3 m12 small-btn-container">
+                    <input type="submit" class="btn green small-btn" value="ambos">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  <i class="fa fa-paw"></i>Especificacion</div>
+                <div class="collapsible-body">
+                  <ul>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="allergic" id="allergic" value="1">
+                      <label for="allergic">tipo (63)</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="pet" id="pet" value="1">
+                      <label for="pet">Tipo2</label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  <i class="fa fa-barcode"></i>clasificacion</div>
+                <div class="collapsible-body">
+                  <ul>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="manufacturer[]" id="Dirt Devil" value="4">
+                      <label for="Dirt Devil">clasificacion1</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="manufacturer[]" id="Ecovacs" value="2">
+                      <label for="Ecovacs">clasificacion2</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="manufacturer[]" id="Hoover" value="11">
+                      <label for="Hoover">clasificacion3</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="manufacturer[]" id="Infinuvo" value="14">
+                      <label for="Infinuvo">clasification4</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="manufacturer[]" id="iRobot" value="1">
+                      <label for="iRobot">clasificacion 6</label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="collapsible" data-collapsible="expandable">
+              <li>
+                <div class="collapsible-header">
+                  <i class="fa fa-square"></i>tipo</div>
+                <div class="collapsible-body">
+                  <ul>
+                    <li>
+                      <input onclick="this.form.submit()" type="radio" name="area" id="area_60" value="60">
+                      <label for="area_60">tipo1</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="radio" name="area" id="area_80" value="80">
+                      <label for="area_80">tipo2</label>
+
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="radio" name="area" id="area_100" value="100">
+                      <label for="area_100">tipo3</label>
+
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  <i class="fa fa-cogs"></i>Ausstattung</div>
+                <div class="collapsible-body">
+                  <ul>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="programming" id="programming" value="1">
+                      <label for="programming">Programmierfunktion (87)</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="remote" id="remote" value="1">
+                      <label for="remote">Fernbedienung (65)</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="virtual_wall" id="virtual_wall" value="1">
+                      <label for="virtual_wall">Virtuelle Wände (64)</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="checkbox" name="fall_protection" id="fall_protection" value="1">
+                      <label for="fall_protection">Absturzsicherung (84)</label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  <i class="fa fa-bullhorn"></i>Lautstärke</div>
+                <div class="collapsible-body">
+                  <ul>
+                    <li>
+                      <input onclick="this.form.submit()" type="radio" name="noise" id="noise_60" value="60">
+                      <label for="noise_60">bis 60 dB (55)</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="radio" name="noise" id="noise_70" value="70">
+                      <label for="noise_70">61 bis 70 dB (14)</label>
+                    </li>
+                    <li>
+                      <input onclick="this.form.submit()" type="radio" name="noise" id="noise_71" value="71">
+                      <label for="noise_71">über 70 dB (31)</label>
+                    </li>
+                    <li>
+                      <input class="with-gap" onclick="this.form.submit()" type="radio" name="noise" id="noise_0" value="0">
+                      <label for="noise_0">Alle anzeigen</label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <noscript><input type="submit" value="Filter anwenden" class="filter-submit-bottom btn btn-success"></noscript>
+          </div>
+        </div>
+      </div>
+      <!-- //end filter-->
+      <div class="col m9 s12">
+        <div class="row header-produktliste">
+          <div class="col m5 s12 modelsearch">
+            <form class="row" method="get" action="/suche/filter" role="search">
+              <div class="input-field col s12">
+                <input type="text" name="term" id="robot" placeholder="search" value="">
+                <label for="search">
+                  <i class="fa fa-search"></i>
+                </label>
+                <!--<input type="submit" class="col s3 btn" name="submitautocomplete" value="Suchen" type="button" >-->
+              </div>
+            </form>
+          </div>
+          <div class="col m4 offset-m3 s12">
+            <select name="sort" onchange="this.form.submit()">
+              <option value="valor1">valor1</option>
+              <option selected="selected" value="valor2">valor2</option>
+              <option value="valor3">valor3</option>
+              <option value="valor4">valor4</option>
+              <option value="valor5">valor5</option>
+            </select>
+          </div>
+        </div>
+        <ul class="row produktliste">
+          <li data-url-follow="/roboter/saugroboter/irobot-roomba-651/" class="col l4 m6 s12 clearfix">
+            <div class="card">
+              <div class="card-image">
+                <img src="http://ecx.images-amazon.com/images/I/41qYdl%2Be-zL.jpg" alt="iRobot Roomba 651">
+              </div>
+              <div class="card-content">
+                <h3>
+                  <a href="/roboter/saugroboter/irobot-roomba-651/">iRobot Roomba 651</a>
+                </h3>
+                <span class="price-used">
+                  <i class="used">0 gebrauchte Roomba 651</i>
+                </span>
+              </div>
+              <div class="card-action row">
+                <span class="col s6">
+                  <span class="rating" title="5.0 Sterne von 5">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </span>
+                  <span class="reviews-no">1</span>
+                </span>
+                <span class="col s6 price">
+                  <span>ab 448.00
+                  </span>€
+                  <span class="savemoney">
+                    <strike>449.00 €</strike>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li data-url-follow="/roboter/saugroboter/klarstein-cleanhero/" class="col l4 m6 s12 clearfix">
+            <div class="card">
+              <div class="card-image">
+                <img src="http://ecx.images-amazon.com/images/I/31ivNwBmXkL.jpg" alt="Klarstein Cleanhero">
+              </div>
+              <div class="card-content">
+                <h3>
+                  <a href="/roboter/saugroboter/klarstein-cleanhero/">Klarstein Cleanhero</a>
+                </h3>
+                <span class="price-used">
+                  <i class="used">0 gebrauchte Cleanhero</i>
+                </span>
+              </div>
+              <div class="card-action row">
+                <span class="col s6">
+                  <span class="rating" title="4.8 Sterne von 5">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star-half-o"></span>
+                  </span>
+                  <span class="reviews-no">10</span>
+                </span>
+                <span class="col s6 price">
+                  <span>ab 179.90
+                  </span>€
+                  <span class="savemoney"></span>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li data-url-follow="/roboter/saugroboter/irobot-roomba-660/" class="col l4 m6 s12 clearfix">
+            <div class="card">
+              <div class="card-image">
+                <img src="/assets/uploads/saugroboter/overview/1f4ca-irobot-roomba-660-obersicht.jpg" alt="iRobot Roomba 660">
+              </div>
+              <div class="card-content">
+                <h3>
+                  <a href="/roboter/saugroboter/irobot-roomba-660/">iRobot Roomba 660</a>
+                </h3>
+                <span class="price-used">
+                  <i class="used">0 gebrauchte Roomba 660</i>
+                </span>
+              </div>
+              <div class="card-action row">
+                <span class="col s6">
+                  <span class="rating" title="4.7 Sterne von 5">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star-half-o"></span>
+                  </span>
+                  <span class="reviews-no">15</span>
+                </span>
+                <span class="col s6 price">
+                  <span>ab 465.00
+                  </span>€
+                  <span class="savemoney">
+                    <strike>479.99 €</strike>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
