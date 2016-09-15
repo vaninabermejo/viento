@@ -1,3 +1,51 @@
+.title-h1 {
+    font-size: 1.64rem;
+    line-height: 1.64rem;
+    font-weight: 200;
+    margin: 10px 0 35px;
+    padding: 0;
+}
+
+.filter-elements .btn {
+    margin-top: 10px;
+    font-size: .9rem;
+    text-transform: none;
+    display: block;
+}
+.big-font {
+    font-size: 15px;
+    display: block;
+    margin-top: 10px;
+}
+
+.input-field {
+    position: relative;
+    margin-top: 1rem;
+}
+.filter-elements .collapsible-header {
+    background: #eee;
+}
+.collapsible-header {
+    display: block;
+    cursor: pointer;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.filter-elements .collapsible-body {
+    padding: 20px;
+    background: #fff;
+}
+.collapsible-body {
+    overflow: hidden;
+    display: none;
+    border-bottom: 1px solid #ddd;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 /*[class*='col-'] {
   float: left;
 }

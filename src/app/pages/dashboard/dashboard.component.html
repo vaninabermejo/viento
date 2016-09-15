@@ -11,26 +11,27 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col m3 s12">
-        <h1 class="saugroboter-h1">title
-          <span>(100)</span>
-        </h1>
+        <h1 class="title-h1">Products</h1>
         <router-outlet></router-outlet>
         <div class="filter-elements">
-          <a class="btn waves-effect waves-light green" href="/roboter/saugroboter/">boton1</a>
+          <a class="btn waves-effect waves-light green  " href="/roboter/saugroboter/">boton1</a>
           <a class="btn waves-effect waves-light blue" href="/roboter/saugroboter/vergleich/">boton2</a>
           <a class="btn waves-effect waves-light orange" href="/roboter/saugroboter/gebraucht/">boton3</a>
+
+
           <div class="filter-container">
-            <strong class="big-font">busquedas</strong>
+            <strong class="big-font">Search</strong>
             <input type="hidden" value="1" name="filter">
             <input type="hidden" value="" name="term">
             <input type="hidden" value="" name="used">
 
-            <ul class="collapsible" data-collapsible="expandable">
+            <!-- <ul class="collapsible" data-collapsible="expandable"> -->
+            <ul materialize="collapsible" class="collapsible" data-collapsible="expandable">
+
               <li>
-                <div class="collapsible-header">
-                  <i class="fa fa-eur"></i>Precio</div>
+                <div class="collapsible-header "><i class="material-icons"></i>Precio</div>
                 <div class="collapsible-body">
-                  <div class="input-field col l4 m12">
+                  <div class="input-field col l3 m12">
                     <input class="validate" type="text" name="minp" id="minp" value="">
                     <label for="minp">precio</label>
                   </div>
@@ -39,13 +40,12 @@
                     <label for="maxp">precio</label>
                   </div>
                   <div class="input-field col l3 m12 small-btn-container">
-                    <input type="submit" class="btn green small-btn" value="ambos">
+                    <input type="submit" class="btn green small-btn" value="los">
                   </div>
                 </div>
               </li>
               <li>
-                <div class="collapsible-header">
-                  <i class="fa fa-paw"></i>Especificacion</div>
+                <div class="collapsible-header "><i class="material-icons"></i>Especificacion</div>
                 <div class="collapsible-body">
                   <ul>
                     <li>
@@ -61,7 +61,7 @@
               </li>
               <li>
                 <div class="collapsible-header">
-                  <i class="fa fa-barcode"></i>clasificacion</div>
+                  <i class="material-icons"></i>clasificacion</div>
                 <div class="collapsible-body">
                   <ul>
                     <li>
@@ -89,10 +89,9 @@
               </li>
             </ul>
 
-            <ul class="collapsible" data-collapsible="expandable">
+            <ul  materialize="collapsible" class="collapsible" data-collapsible="expandable">
               <li>
-                <div class="collapsible-header">
-                  <i class="fa fa-square"></i>tipo</div>
+                <div class="collapsible-header"><i></i>tipo</div>
                 <div class="collapsible-body">
                   <ul>
                     <li>
@@ -102,12 +101,10 @@
                     <li>
                       <input onclick="this.form.submit()" type="radio" name="area" id="area_80" value="80">
                       <label for="area_80">tipo2</label>
-
                     </li>
                     <li>
                       <input onclick="this.form.submit()" type="radio" name="area" id="area_100" value="100">
                       <label for="area_100">tipo3</label>
-
                     </li>
                   </ul>
                 </div>
